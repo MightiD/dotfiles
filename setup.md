@@ -6,7 +6,7 @@ linux linux-headers linux-firmware base-devel git openssl pkgconf cpio sof-firmw
 
 efibootmgr grub dosfstools ntfs-3g dmidecode tree man-db man-pages arch-install-scripts cronie reflector less
 
-hyprland hypridle hyprlock hyprshot xdg-desktop-portal-hyprland qt5-wayland qt6-wayland ly
+hyprland hypridle hyprlock hyprshot hyprpicker xdg-desktop-portal-hyprland qt5-wayland qt6-wayland ly
 
 waybar wofi fuzzel swaync
 
