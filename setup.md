@@ -16,7 +16,7 @@ cups cups-pdf ghostscript
 
 kitty nvim tmux eza stow
 
-dolphin superfile nsxiv mpv wf-recorder swappy grim slurp
+dolphin superfile nsxiv mpv wf-recorder satty grim slurp
 
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
