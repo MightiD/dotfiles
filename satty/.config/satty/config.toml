@@ -1,0 +1,37 @@
+[general]
+floating-hack = true
+# auto-copy = true
+early-exit = true
+corner-roundness = 1
+# Select the tool on startup [possible values: pointer, crop, line, arrow, rectangle, text, marker, blur, brush]
+initial-tool = "arrow"
+copy-command = "wl-copy"
+# Increase or decrease the size of the annotations
+annotation-size-factor = 1
+# [possible values: save-to-clipboard, save-to-file, save-to-file-as, copy-filepath-to-clipboard, exit]
+actions-on-enter = ["save-to-clipboard", "exit"]
+actions-on-escape = ["exit"]
+no-window-decoration = true
+
+# Tool selection keyboard shortcuts (since 0.20.0)
+[keybinds]
+pointer = "p"
+crop = "c"
+brush = "b"
+line = "i"
+arrow = "a"
+rectangle = "r"
+ellipse = "e"
+text = "t"
+marker = "m"
+blur = "u"
+highlight = "g"
+
+# Font to use for text annotations
+[font]
+family = "Roboto"
+style = "Regular"
+fallback = [
+    "Firacode NerdFont"
+]
+
