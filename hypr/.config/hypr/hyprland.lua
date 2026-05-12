@@ -28,12 +28,13 @@ hs.config({ num_workspaces = 10 })
 
 
 -- Apps
-local terminal = "kitty"
-local fileManager = "EDITOR=nvim kitty -e spf"
+local terminal =       "kitty"
+local fileManager =    "EDITOR=nvim kitty -e spf"
 local fileManagerGui = "dolphin ~"
-local menu = "fuzzel"
-local browser = "chromium"
-local screenshot = "hyprshot -m region output --clipboard-only --freeze"
+local menu =           "fuzzel"
+local browser =        "chromium"
+local screenshot =     "hyprshot -m region output --clipboard-only --freeze"
+local satty =          "grim -g \"$(slurp)\" - | satty -f -"
 
 
 -- Audostart
@@ -82,7 +83,6 @@ hl.config({
         rounding = 2,
         rounding_power = 10,
     },
-
     animations = { enabled = false },
 
     dwindle = { preserve_split = true },
@@ -118,6 +118,7 @@ hl.bind(mainMod .. "+ R",         hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. "+ B",         hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. "+ M",         hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(screenshot))
+hl.bind(mainMod .. "+ SHIFT + ALT + S", hl.dsp.exec_cmd(satty))
 
 -- Hypr functions
 hl.bind(mainMod .. "+ Q", hl.dsp.window.close())
