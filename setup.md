@@ -69,13 +69,6 @@ rustup update
 sudo systemctl enable --now sshd
 ```
 
-### Hyprland Plugins:
-```sh
-hyprpm update
-hyprpm add https://github.com/shezdy/hyprsplit
-hyprpm enable hyprsplit
-```
-
 ### ZSH:
 #### OhMyZsh:
 ```sh
@@ -136,8 +129,7 @@ xdg-mime query default application/pdf
 Go to `chrome://flags/#webrtc-ip-handling-policy`  
 Set from `Disable non proxied udp` to `Default`
 
-### FreeCAD:
-Run for icons:
+### Submodules (FreeCAD & Hyprsplit):
 ```sh
 git submodule update --init
 ```
