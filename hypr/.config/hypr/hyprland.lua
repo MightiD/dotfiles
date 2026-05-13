@@ -121,10 +121,11 @@ hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(screenshot))
 hl.bind(mainMod .. "+ SHIFT + ALT + S", hl.dsp.exec_cmd(satty))
 
 -- Hypr functions
-hl.bind(mainMod .. "+ Q", hl.dsp.window.close())
-hl.bind(mainMod .. "+ V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. "+ S", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. "+ F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. "+ Q",         hl.dsp.window.close())
+hl.bind(mainMod .. "+ V",         hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. "+ S",         hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. "+ F",         hl.dsp.window.fullscreen({ mode="maximized", action = "toggle" }))
+hl.bind(mainMod .. "+ SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- Navigation
 hl.bind(mainMod .. "+ H", hl.dsp.focus({ direction = "left" }))
