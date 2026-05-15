@@ -37,7 +37,7 @@ local screenshot =     "hyprshot -m region output --clipboard-only --freeze"
 local satty =          "grim -g \"$(slurp)\" - | satty -f -"
 
 
--- Audostart
+-- Autostart
 hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     hl.exec_cmd("awww-daemon")
