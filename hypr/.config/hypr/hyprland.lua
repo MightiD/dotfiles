@@ -30,7 +30,7 @@ hs.config({ num_workspaces = 10 })
 -- Apps
 local terminal =       "kitty"
 local fileManager =    "EDITOR=nvim kitty -e spf"
-local fileManagerGui = "dolphin ~"
+local fileManagerGui = "dolphin --new-window ~"
 local menu =           "fuzzel"
 local browser =        "chromium"
 local screenshot =     "hyprshot -m region output --clipboard-only --freeze"
