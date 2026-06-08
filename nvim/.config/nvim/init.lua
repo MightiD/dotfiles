@@ -24,11 +24,9 @@ vim.opt.autocomplete = true
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 
--- Keymap
-vim.keymap.set("n", "<leader>i", function()
-    vim.cmd("normal! mzgg=G`z")
-end)
+require("vim._core.ui2").enable({})
 
+-- Keymap
 vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("n", "<leader>p", '"+p')
 vim.keymap.set("n", "<leader>c", '"+yy')
