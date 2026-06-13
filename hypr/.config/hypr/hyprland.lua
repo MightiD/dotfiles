@@ -32,7 +32,7 @@ local terminal =       "kitty"
 local fileManager =    "EDITOR=nvim kitty -e spf"
 local fileManagerGui = "dolphin --new-window ~"
 local menu =           "fuzzel"
-local browser =        "chromium"
+local browser =        "firefox"
 local screenshot =     "hyprshot -m region output --clipboard-only --freeze"
 local satty =          "grim -g \"$(slurp)\" - | satty -f -"
 
