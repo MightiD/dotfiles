@@ -29,8 +29,7 @@ hs.config({ num_workspaces = 10 })
 
 -- Apps
 local terminal =       "kitty"
-local fileManager =    "EDITOR=nvim kitty -e spf"
-local fileManagerGui = "dolphin --new-window ~"
+local fileManager = "pcmanfm-qt"
 local menu =           "fuzzel"
 local browser =        "firefox"
 local screenshot =     "hyprshot -m region output --clipboard-only --freeze"
@@ -113,7 +112,6 @@ local mainMod = "SUPER"
 -- Apps
 hl.bind(mainMod .. "+ tab",       hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. "+ E",         hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. "+ SHIFT + E", hl.dsp.exec_cmd(fileManagerGui))
 hl.bind(mainMod .. "+ R",         hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. "+ B",         hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. "+ M",         hl.dsp.exec_cmd("hyprlock"))

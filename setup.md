@@ -16,7 +16,7 @@ cups cups-pdf ghostscript
 
 kitty nvim tmux eza stow
 
-dolphin superfile nsxiv mpv wf-recorder satty grim slurp
+pcmanfm-qt nsxiv mpv wf-recorder satty grim slurp
 
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
@@ -34,7 +34,6 @@ docker docker-compose
 qt6ct-kde
 ttf-miracode
 waybar-module-music
-ungoogled-chromium-bin
 ```
 
 ### AUR Installation:
@@ -98,36 +97,6 @@ xrdb ~/.Xresources
 stow */        # for everything
 stow {package} # for a specific package
 ```
-
-### Ungoogled-chromium:
-Download the chrome `.deb` image from [here](https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb)
-```sh
-ar x google-chrome-stable-current_amd64.deb
-tar -xvf data.tar.xz
-cd ./opt/google/chrome/WidevineCdm
-sudo cp -r ./ /usr/lib/chromium/WidevineCdm
-```
-enable widevine with `--enable-widevine`
-#### Set as default:
-##### Set:
-```sh
-xdg-settings set default-web-browser chromium.desktop
-xdg-mime default chromium.desktop x-scheme-handler/http
-xdg-mime default chromium.desktop x-scheme-handler/https
-xdg-mime default chromium.desktop application/pdf
-```
-
-##### Verify:
-```sh
-xdg-settings get default-web-browser
-xdg-mime query default x-scheme-handler/http
-xdg-mime query default x-scheme-handler/https
-xdg-mime query default application/pdf
-```
-
-#### Web RTC fix:
-Go to `chrome://flags/#webrtc-ip-handling-policy`  
-Set from `Disable non proxied udp` to `Default`
 
 ### Submodules (FreeCAD & Hyprsplit):
 ```sh
