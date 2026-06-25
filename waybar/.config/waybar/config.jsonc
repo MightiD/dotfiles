@@ -12,7 +12,6 @@
 
     "modules-right": [
         "tray",
-        "custom/music",
         "pulseaudio",
         "power-profiles-daemon",
         "clock"
@@ -33,7 +32,7 @@
     "clock": {
         "justify": "center",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%H:%M - %d}",
     },
 
     "power-profiles-daemon": {
