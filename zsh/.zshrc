@@ -1,3 +1,9 @@
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+    start-hyprland
+fi
+
+export PATH="/usr/sbin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 fpath=($HOME/.zsh_completions $fpath)
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
 
