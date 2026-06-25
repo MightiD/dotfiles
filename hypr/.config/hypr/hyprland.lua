@@ -21,6 +21,12 @@ hl.monitor({
     transform = 3,
 })
 
+hl.monitor({
+    output = "HDMI-A-3",
+    mode = "1920x1080@60",
+    mirror = "DP-1"
+})
+
 
 -- Plugins
 local hs = require("plugins/hyprsplit")
@@ -41,7 +47,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("waybar")
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("swaync")
-    hl.exec_cmd("hypridle")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Breeze-Dark\"")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
     hl.exec_cmd("hyprctl reload")
