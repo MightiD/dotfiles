@@ -16,7 +16,7 @@ cups cups-pdf ghostscript
 
 kitty nvim tmux eza stow
 
-pcmanfm-qt nsxiv mpv wf-recorder satty grim slurp
+pcmanfm-qt imv mpv wf-recorder satty grim slurp
 
 pipewire pipewire-alsa pipewire-pulse pipewire-jack
 
