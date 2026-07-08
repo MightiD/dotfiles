@@ -22,7 +22,8 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}"
+        "tooltip": false,
+        "format": "{name}",
     },
 
     "hyprland/window": {
