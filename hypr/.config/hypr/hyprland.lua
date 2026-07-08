@@ -120,6 +120,7 @@ hl.bind(mainMod .. "+ E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. "+ R",         hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. "+ B",         hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. "+ M",         hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. "+ N",         hl.dsp.exec_cmd("swaync-client --toggle-panel"))
 hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.exec_cmd(screenshot))
 hl.bind(mainMod .. "+ SHIFT + ALT + S", hl.dsp.exec_cmd(satty))
 
