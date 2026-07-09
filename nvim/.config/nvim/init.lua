@@ -37,8 +37,6 @@ vim.keymap.set("n", "<leader>n", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>c", ":cd %:p:h<CR>")
 vim.keymap.set("i", "<C-space>", "<C-x><C-o>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set("i", "<Tab>", "pumvisible() ? '<C-n>' : '<Tab>'", { noremap = true, expr = true })
-vim.keymap.set("i", "<S-Tab>", "pumvisible() ? '<C-p>' : '<S-Tab>'", { noremap = true, expr = true })
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { buffer = true })
 
