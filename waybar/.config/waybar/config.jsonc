@@ -23,17 +23,17 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "tooltip": false,
-        "format": "{name}",
+        "format": "{name}"
     },
 
     "hyprland/window": {
-        "tooltip": false,
+        "tooltip": false
     },
 
     "clock": {
         "justify": "center",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M - %d}",
+        "format": "{:%H:%M - %d}"
     },
 
     "power-profiles-daemon": {
@@ -41,11 +41,11 @@
         "format": "{icon}",
         "tooltip": false,
         "format-icons": {
-        "default": "\udb85\udc0b",
-        "performance": "\udb85\udc0b",
-        "balanced": "\uf24e",
-        "power-saver": "\udb80\udf2a"
-      }
+            "default": "\udb85\udc0b",
+            "performance": "\udb85\udc0b",
+            "balanced": "\uf24e",
+            "power-saver": "\udb80\udf2a"
+        }
     },
 
     "pulseaudio": {
@@ -55,9 +55,8 @@
         "format-muted": "\ueee8",
         "on-click": "pavucontrol"
     },
-    "custom/music": {
-        "format": "{}",
-        "return-type": "json",
-        "exec": "waybar-module-music --marquee --delay-marquee 750 --title-width 17 --artist-width 13 --format \"%icon% %title% | %artist%\"",
-    },
+
+    "tray": {
+        "spacing": 5
+    }
 }
