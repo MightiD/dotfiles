@@ -34,7 +34,7 @@ hs.config({ num_workspaces = 10 })
 
 
 -- Apps
-local terminal =       "kitty"
+local terminal =       "ghostty"
 local fileManager = "pcmanfm-qt"
 local menu =           "fuzzel"
 local browser =        "firefox"
