@@ -17,5 +17,6 @@
         ../modules/imv.nix
         ../modules/school.nix
         ../modules/libreoffice.nix
+        ../modules/cifs.nix
     ];
 }
