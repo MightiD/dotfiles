@@ -13,14 +13,9 @@
             url = "github:nix-community/stylix/release-26.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        firefox-addons = {
-            url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
-    outputs = { nixpkgs, home-manager, stylix, ... }@inputs: {
+    outputs = { nixpkgs, home-manager, stylix, ... }: {
         nixosConfigurations = {
             desktop = nixpkgs.lib.nixosSystem {
                 modules = [
@@ -34,7 +29,6 @@
                             users.mightid.imports = [
                                 ./home/machines/desktop.nix
                             ];
-                            extraSpecialArgs = { inherit inputs; };
                             backupFileExtension = "backup";
                         };
                     }
@@ -52,7 +46,6 @@
                             users.mightid.imports = [
                                 ./home/machines/laptop.nix
                             ];
-                            extraSpecialArgs = { inherit inputs; };
                             backupFileExtension = "backup";
                         };
                     }

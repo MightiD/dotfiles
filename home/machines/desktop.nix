@@ -8,6 +8,5 @@
         ../modules/ghostty.nix
         ../modules/gaming.nix
         ../modules/theming.nix
-        ../modules/firefox.nix
     ];
 }
