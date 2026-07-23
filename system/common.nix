@@ -8,7 +8,6 @@
         ./modules/boot.nix
         ./modules/users.nix
         ./modules/locale.nix
-        ./modules/networking.nix
         ./modules/programming.nix
         ./modules/openssh.nix
     ];

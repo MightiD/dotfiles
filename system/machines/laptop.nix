@@ -4,6 +4,7 @@
 
     imports = [
         ../common.nix
+        ../modules/networking-laptop.nix
         ../modules/kde.nix
         ../modules/ly.nix
         ../modules/firefox.nix

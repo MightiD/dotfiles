@@ -4,6 +4,7 @@
 
     imports = [
         ../common.nix
+        ../modules/networking-desktop.nix
         ../modules/hypr.nix
         ../modules/firefox.nix
         ../modules/pipewire.nix
