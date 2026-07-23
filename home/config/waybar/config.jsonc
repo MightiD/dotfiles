@@ -53,7 +53,7 @@
         "scroll-step": 5,
         "format": "{volume}% \uf028",
         "format-muted": "\ueee8",
-        "on-click": "pavucontrol"
+        "on-click": "pwvucontrol"
     },
 
     "tray": {
