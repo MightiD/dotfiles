@@ -9,6 +9,8 @@
             background = "000000";
             confirm-close-surface = false;
             theme = "Gruvbox Material Dark";
+            window-inherit-working-directory = false;
+            working-directory = "~/";
         };
     };
 }
