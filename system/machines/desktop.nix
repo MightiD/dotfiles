@@ -16,5 +16,6 @@
         ../modules/bluetooth.nix
         ../modules/imv.nix
         ../modules/school.nix
+        ../modules/libreoffice.nix
     ];
 }
