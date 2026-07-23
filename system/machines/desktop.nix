@@ -16,5 +16,6 @@
         ../modules/cifs.nix
         ../modules/syncthing.nix
         ../modules/keyboard.nix
+        ../modules/docker.nix
     ];
 }

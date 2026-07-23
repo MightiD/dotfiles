@@ -15,5 +15,6 @@
         ../modules/bluetooth.nix
         ../modules/school.nix
         ../modules/syncthing.nix
+        ../modules/docker.nix
     ];
 }
