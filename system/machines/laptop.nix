@@ -14,5 +14,6 @@
         ../modules/cad.nix
         ../modules/bluetooth.nix
         ../modules/imv.nix
+        ../modules/school.nix
     ];
 }
