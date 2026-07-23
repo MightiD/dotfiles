@@ -2,7 +2,7 @@
 {
     users.users.mightid = {
         isNormalUser = true;
-        extraGroups = [ "wheel" ];
+        extraGroups = [ "wheel" "dialout" ];
         shell = pkgs.zsh;
     };
 
