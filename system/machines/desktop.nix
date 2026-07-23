@@ -13,5 +13,6 @@
         ../modules/gaming.nix
         ../modules/cad.nix
         ../modules/bluetooth.nix
+        ../modules/imv.nix
     ];
 }
