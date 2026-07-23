@@ -25,5 +25,8 @@
 
     services.getty.autologinUser = "mightid";
 
+    time.timeZone = "Europe/London";
+    services.timesyncd.enable = true;
+
     system.stateVersion = "26.05";
 }
