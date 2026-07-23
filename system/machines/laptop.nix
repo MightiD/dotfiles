@@ -12,5 +12,6 @@
         ../modules/theming.nix
         ../modules/gaming.nix
         ../modules/cad.nix
+        ../modules/bluetooth.nix
     ];
 }
