@@ -3,17 +3,24 @@
 
     inputs = {
         nixpkgs.url = "nixpkgs/nixos-26.05";
+
         home-manager = {
             url = "github:nix-community/home-manager/release-26.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
         stylix = {
             url = "github:nix-community/stylix/release-26.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        firefox-addons = {
+            url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { nixpkgs, home-manager, stylix, ... }: {
+    outputs = { nixpkgs, home-manager, stylix, ... }@inputs: {
         nixosConfigurations = {
             desktop = nixpkgs.lib.nixosSystem {
                 modules = [
@@ -27,6 +34,7 @@
                             users.mightid.imports = [
                                 ./home/machines/desktop.nix
                             ];
+                            extraSpecialArgs = { inherit inputs; };
                             backupFileExtension = "backup";
                         };
                     }
@@ -44,6 +52,7 @@
                             users.mightid.imports = [
                                 ./home/machines/laptop.nix
                             ];
+                            extraSpecialArgs = { inherit inputs; };
                             backupFileExtension = "backup";
                         };
                     }

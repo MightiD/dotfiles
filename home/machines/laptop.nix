@@ -5,5 +5,6 @@
         ../modules/ghostty.nix
         ../modules/theming.nix
         ../modules/gaming.nix
+        ../modules/firefox.nix
     ];
 }
