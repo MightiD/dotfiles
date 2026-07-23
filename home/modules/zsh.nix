@@ -23,6 +23,9 @@
             bgcmd() {
                 nohup "$@" > /dev/null 2>&1 &
             }
+            nrs() {
+                sudo nixos-rebuild switch --impure --flake .#$1
+            }
         '';
         sessionVariables = {
             EDITOR = "nvim";
