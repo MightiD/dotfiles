@@ -15,5 +15,6 @@
         ../modules/school.nix
         ../modules/cifs.nix
         ../modules/syncthing.nix
+        ../modules/keyboard.nix
     ];
 }
