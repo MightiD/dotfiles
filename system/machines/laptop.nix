@@ -6,17 +6,14 @@
         ../common.nix
         ../modules/networking-laptop.nix
         ../modules/kde.nix
+        ../modules/desktop-apps.nix
         ../modules/ly.nix
-        ../modules/firefox.nix
         ../modules/pipewire.nix
-        ../modules/ghostty.nix
         ../modules/theming.nix
         ../modules/gaming.nix
         ../modules/cad.nix
         ../modules/bluetooth.nix
-        ../modules/imv.nix
         ../modules/school.nix
-        ../modules/libreoffice.nix
         ../modules/syncthing.nix
     ];
 }
