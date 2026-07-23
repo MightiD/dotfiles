@@ -6,6 +6,7 @@
         thunar-volman
         ghostty
         imv
+        mpv
         libreoffice
     ];
 
