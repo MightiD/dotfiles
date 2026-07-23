@@ -9,7 +9,7 @@
 
     environment.loginShellInit = ''
         if [ "$(tty)" = "/dev/tty1" ]; then
-            start-hyprland
+            exec start-hyprland
         fi
     '';
 
