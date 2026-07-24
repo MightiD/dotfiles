@@ -4,6 +4,7 @@
         thunar
         thunar-archive-plugin
         thunar-volman
+        spotify
         ghostty
         imv
         mpv
