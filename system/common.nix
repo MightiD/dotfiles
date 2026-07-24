@@ -5,7 +5,6 @@
     
     imports = [
         /etc/nixos/hardware-configuration.nix
-        ./modules/boot.nix
         ./modules/users.nix
         ./modules/locale.nix
         ./modules/programming.nix

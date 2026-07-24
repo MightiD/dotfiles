@@ -4,6 +4,7 @@
 
     imports = [
         ../common.nix
+        ../modules/boot-laptop.nix
         ../modules/networking-laptop.nix
         ../modules/kde.nix
         ../modules/desktop-apps.nix

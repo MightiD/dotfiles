@@ -4,6 +4,7 @@
 
     imports = [
         ../common.nix
+        ../modules/boot-desktop.nix
         ../modules/networking-desktop.nix
         ../modules/hypr.nix
         ../modules/desktop-apps.nix
