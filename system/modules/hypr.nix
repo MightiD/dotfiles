@@ -19,5 +19,6 @@
         awww
         fuzzel
         waybar
+        playerctl
     ];
 }
