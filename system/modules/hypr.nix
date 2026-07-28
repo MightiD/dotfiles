@@ -19,6 +19,9 @@
         awww
         fuzzel
         waybar
+        thunar
+        thunar-archive-plugin
+        thunar-volman
         playerctl
     ];
 }

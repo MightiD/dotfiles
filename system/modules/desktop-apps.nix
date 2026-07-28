@@ -1,9 +1,6 @@
 { pkgs, ... }:
 {
     environment.systemPackages = with pkgs; [
-        thunar
-        thunar-archive-plugin
-        thunar-volman
         spotify
         ghostty
         imv
