@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-    boot.loader.efi.canTouchEfiVariables = true;
-
     boot.kernelParams = [
         "quiet"
         "splash"
