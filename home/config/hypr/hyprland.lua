@@ -93,7 +93,7 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout = "gb",
+        -- kb_layout = "gb",
         kb_options = "caps:escape",
         numlock_by_default = true,
 
