@@ -31,9 +31,10 @@
     },
 
     "clock": {
+        "interval": 1,
         "justify": "center",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%H:%M - %d}"
+        "format": "{:%H:%M:%S - %d}"
     },
 
     "power-profiles-daemon": {
