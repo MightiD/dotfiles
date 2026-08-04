@@ -1,6 +1,8 @@
 { ... }:
 {
-    networking.hostName = "nixos";
+    networking.hostName = "miniNix";
+
+    hardware.sensor.iio.enable = true;
 
     imports = [
         ../common.nix

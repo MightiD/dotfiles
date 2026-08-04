@@ -1,6 +1,6 @@
 { ... }:
 {
-    networking.hostName = "nixos";
+    networking.hostName = "bigNix";
 
     imports = [
         ../common.nix
