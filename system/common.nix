@@ -19,6 +19,7 @@
         tmux
         eza
         btop
+        dysk
         fastfetch
     ];
 
