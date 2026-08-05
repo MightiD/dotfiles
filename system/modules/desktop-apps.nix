@@ -6,6 +6,7 @@
         imv
         mpv
         libreoffice
+        wl-clipboard
     ];
 
     programs.firefox.enable = true;
