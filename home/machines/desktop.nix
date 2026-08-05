@@ -7,6 +7,6 @@
         ../modules/fuzzel.nix
         ../modules/ghostty.nix
         ../modules/gaming.nix
-        ../modules/theming.nix
+        ../modules/theming-desktop.nix
     ];
 }
