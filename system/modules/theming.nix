@@ -23,4 +23,6 @@
         nerd-fonts.fira-code
         miracode
     ];
+
+    programs.dconf.enable = true;
 }
