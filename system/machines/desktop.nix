@@ -18,5 +18,6 @@
         ../modules/syncthing.nix
         ../modules/keyboard.nix
         ../modules/docker.nix
+        ../modules/printing.nix
     ];
 }
