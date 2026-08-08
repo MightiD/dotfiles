@@ -1,0 +1,26 @@
+{ pkgs, ... }:
+{
+    services.libinput.enable = true;
+
+    programs.hyprland = {
+        enable = true;
+        xwayland.enable = true;
+    };
+
+    environment.loginShellInit = ''
+        if [ "$(tty)" = "/dev/tty1" ]; then
+            exec start-hyprland
+        fi
+    '';
+
+    environment.systemPackages = with pkgs; [
+        hyprshot
+        awww
+        fuzzel
+        waybar
+        thunar
+        thunar-archive-plugin
+        thunar-volman
+        playerctl
+    ];
+}
