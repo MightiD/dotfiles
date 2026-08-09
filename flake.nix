@@ -17,7 +17,7 @@
 
     outputs = { nixpkgs, home-manager, stylix, ... }: {
         nixosConfigurations = {
-            desktop = nixpkgs.lib.nixosSystem {
+            bigNix = nixpkgs.lib.nixosSystem {
                 modules = [
                     ./system/machines/desktop.nix
                     home-manager.nixosModules.home-manager
@@ -34,7 +34,7 @@
                     }
                 ];
             };
-            laptop = nixpkgs.lib.nixosSystem {
+            miniNix = nixpkgs.lib.nixosSystem {
                 modules = [
                     ./system/machines/laptop.nix
                     stylix.nixosModules.stylix

@@ -21,6 +21,7 @@
         btop
         dysk
         fastfetch
+        ripgrep
     ];
 
     services.getty.autologinUser = "mightid";

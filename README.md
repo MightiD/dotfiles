@@ -1,6 +1,6 @@
 make work using this command
 ``` sh
-sudo nixos-rebuild switch --flake .#desktop --impure
+sudo nixos-rebuild switch --flake .#host --impure
 ```
 
-either `desktop` or `laptop`
+either `bigNix` or `miniNix`
