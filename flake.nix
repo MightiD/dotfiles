@@ -19,7 +19,7 @@
         nixosConfigurations = {
             bigNix = nixpkgs.lib.nixosSystem {
                 modules = [
-                    ./system/machines/desktop.nix
+                    ./system/machines/desktop/default.nix
                     home-manager.nixosModules.home-manager
                     stylix.nixosModules.stylix
                     {
@@ -36,7 +36,7 @@
             };
             miniNix = nixpkgs.lib.nixosSystem {
                 modules = [
-                    ./system/machines/laptop.nix
+                    ./system/machines/laptop/default.nix
                     stylix.nixosModules.stylix
                     home-manager.nixosModules.home-manager
                     {
@@ -45,6 +45,22 @@
                             useUserPackages = true;
                             users.mightid.imports = [
                                 ./home/machines/laptop.nix
+                            ];
+                            backupFileExtension = "backup";
+                        };
+                    }
+                ];
+            };
+            homelab = nixpkgs.lib.nixosSystem {
+                modules = [
+                    ./system/machines/homelab/default.nix
+                    home-manager.nixosModules.home-manager
+                    {
+                        home-manager = {
+                            useGlobalPkgs = true;
+                            useUserPackages = true;
+                            users.mightid.imports = [
+                                ./home/machines/homelab.nix
                             ];
                             backupFileExtension = "backup";
                         };
