@@ -1,6 +1,6 @@
-{ ... }:
+{ host, ... }:
 {
-    networking.hostName = "miniNix";
+    networking.hostName = host;
 
     hardware.sensor.iio.enable = true;
 

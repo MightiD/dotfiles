@@ -23,6 +23,10 @@
     outputs = { nixpkgs, home-manager, stylix, disko, ... }: {
         nixosConfigurations = {
             bigNix = nixpkgs.lib.nixosSystem {
+                specialArgs = {
+                    host = "bigNix";
+                };
+
                 modules = [
                     ./system/machines/desktop/default.nix
                     home-manager.nixosModules.home-manager
@@ -35,11 +39,16 @@
                                 ./home/machines/desktop.nix
                             ];
                             backupFileExtension = "backup";
+                            extraSpecialArgs = { host = "bigNix"; };
                         };
                     }
                 ];
             };
             miniNix = nixpkgs.lib.nixosSystem {
+                specialArgs = {
+                    host = "miniNix";
+                };
+
                 modules = [
                     ./system/machines/laptop/default.nix
                     stylix.nixosModules.stylix
@@ -51,12 +60,17 @@
                             users.mightid.imports = [
                                 ./home/machines/laptop.nix
                             ];
+                            extraSpecialArgs = { host = "miniNix"; };
                             backupFileExtension = "backup";
                         };
                     }
                 ];
             };
             homelab = nixpkgs.lib.nixosSystem {
+                specialArgs = {
+                    host = "homelab";
+                };
+
                 modules = [
                     ./system/machines/homelab/default.nix
                     disko.nixosModules.disko
@@ -68,6 +82,7 @@
                             users.mightid.imports = [
                                 ./home/machines/homelab.nix
                             ];
+                            extraSpecialArgs = { host = "homelab"; };
                             backupFileExtension = "backup";
                         };
                     }

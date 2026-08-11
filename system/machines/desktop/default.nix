@@ -1,12 +1,12 @@
-{ ... }:
+{ host, ... }:
 {
-    networking.hostName = "bigNix";
+    networking.hostName = host;
 
     imports = [
         /etc/nixos/hardware-configuration.nix
         ../../common.nix
         ../../modules/boot.nix
-        ../../modules/networking-desktop.nix
+        ../../modules/networking.nix
         ../../modules/hypr.nix
         ../../modules/desktop-apps.nix
         ../../modules/pipewire.nix
