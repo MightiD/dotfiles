@@ -13,9 +13,14 @@
             url = "github:nix-community/stylix/release-26.05";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        disko = {
+            url = "github:nix-community/disko";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
-    outputs = { nixpkgs, home-manager, stylix, ... }: {
+    outputs = { nixpkgs, home-manager, stylix, disko, ... }: {
         nixosConfigurations = {
             bigNix = nixpkgs.lib.nixosSystem {
                 modules = [
@@ -54,6 +59,7 @@
             homelab = nixpkgs.lib.nixosSystem {
                 modules = [
                     ./system/machines/homelab/default.nix
+                    disko.nixosModules.disko
                     home-manager.nixosModules.home-manager
                     {
                         home-manager = {

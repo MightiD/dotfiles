@@ -4,7 +4,6 @@
     nixpkgs.config.allowUnfree = true;
     
     imports = [
-        /etc/nixos/hardware-configuration.nix
         ./modules/users.nix
         ./modules/locale.nix
         ./modules/programming.nix

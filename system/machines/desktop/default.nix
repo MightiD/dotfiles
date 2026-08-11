@@ -3,6 +3,7 @@
     networking.hostName = "bigNix";
 
     imports = [
+        /etc/nixos/hardware-configuration.nix
         ../../common.nix
         ../../modules/boot.nix
         ../../modules/networking-desktop.nix

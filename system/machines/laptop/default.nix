@@ -5,6 +5,7 @@
     hardware.sensor.iio.enable = true;
 
     imports = [
+        /etc/nixos/hardware-configuration.nix
         ../../common.nix
         ../../modules/boot.nix
         ../../modules/networking.nix
