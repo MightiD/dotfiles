@@ -14,5 +14,6 @@
         ../../modules/networking.nix
         ../../modules/syncthing.nix
         ../../modules/docker.nix
+        ../../modules/samba.nix
     ];
 }
