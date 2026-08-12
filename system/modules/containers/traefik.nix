@@ -1,16 +1,8 @@
 { pkgs, ... }:
 {
-    systemd.services.podman-traefik-network = {
-        description = "Create the traefik proxy network";
-        wantedBy = [ "multi-user.target" ];
-        after = [ "network-online.target" ];
-        wants = [ "network-online.target" ];
-        serviceConfig = {
-            Type = "oneshot";
-            RemainAfterExit = true;
-            ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.podman}/bin/podman network exists traefik || ${pkgs.podman}/bin/podman network create traefik'";
-        };
-    };
+    imports = [ ./podman-networks.nix ];
+
+    podmanNetworks = [ "traefik" ];
 
     virtualisation.oci-containers.containers.traefik = {
         image = "traefik";
