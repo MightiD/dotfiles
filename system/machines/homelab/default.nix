@@ -15,5 +15,6 @@
         ../../modules/syncthing.nix
         ../../modules/docker.nix
         ../../modules/samba.nix
+        ../../modules/openvpn-server.nix
     ];
 }
