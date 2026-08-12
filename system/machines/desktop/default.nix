@@ -18,7 +18,7 @@
         ../../modules/cifs.nix
         ../../modules/syncthing.nix
         ../../modules/keyboard.nix
-        ../../modules/docker.nix
+        ../../modules/containers.nix
         ../../modules/printing.nix
     ];
 }

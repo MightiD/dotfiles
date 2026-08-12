@@ -13,8 +13,9 @@
         ../../modules/boot.nix
         ../../modules/networking.nix
         ../../modules/syncthing.nix
-        ../../modules/docker.nix
+        ../../modules/containers.nix
         ../../modules/samba.nix
         ../../modules/openvpn-server.nix
+        ../../modules/containers/jellyfin.nix
     ];
 }

@@ -19,7 +19,7 @@
         ../../modules/bluetooth.nix
         ../../modules/school.nix
         ../../modules/syncthing.nix
-        ../../modules/docker.nix
+        ../../modules/containers.nix
         ../../modules/printing.nix
     ];
 }
