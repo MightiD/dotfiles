@@ -20,5 +20,8 @@
         ../../modules/keyboard.nix
         ../../modules/containers.nix
         ../../modules/printing.nix
+
+        ../../modules/containers/traefik.nix
+        ../../modules/containers/jellyfin.nix
     ];
 }

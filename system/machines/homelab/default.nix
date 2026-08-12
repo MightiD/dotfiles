@@ -16,6 +16,7 @@
         ../../modules/containers.nix
         ../../modules/samba.nix
         ../../modules/openvpn-server.nix
+        ../../modules/containers/traefik.nix
         ../../modules/containers/jellyfin.nix
     ];
 }
