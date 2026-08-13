@@ -1,6 +1,15 @@
 { pkgs, ... }:
 {
     virtualisation = {
+        containers = {
+            enable = true;
+            containersConf.settings = {
+                network = {
+                    dns_bind_port = 65535;
+                };
+            };
+        };
+
         podman = {
             enable = true;
             dockerCompat = true;
