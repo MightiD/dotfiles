@@ -1,4 +1,4 @@
-{ pkgs, lib, host, ... }:
+{ pkgs, lib, config, host, ... }:
 lib.mkMerge [
     {
         networking.networkmanager = {
@@ -7,6 +7,29 @@ lib.mkMerge [
                 networkmanager-openvpn
             ];
         };
+
+        services.tailscale = {
+            enable = true;
+
+            useRoutingFeatures = if host == "homelab" then "server" else "client";
+        };
+
+        networking.nftables.enable = true;
+
+        networking.firewall = {
+            enable = true;
+
+            trustedInterfaces = [ config.services.tailscale.interfaceName ];
+
+            allowedUDPPorts = [ config.services.tailscale.port ];
+        };
+
+        systemd.services.tailscaled.serviceConfig.Environment = [
+            "TS_DEBUG_FIREWALL_MODE=nftables"
+        ];
+
+        systemd.network.wait-online.enable = false;
+        boot.initrd.systemd.network.wait-online.enable = false;
     }
 
     (lib.mkIf (host == "bigNix") {
