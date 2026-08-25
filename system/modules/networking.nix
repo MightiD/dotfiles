@@ -12,6 +12,11 @@ lib.mkMerge [
             enable = true;
 
             useRoutingFeatures = if host == "homelab" then "server" else "client";
+
+            extraUpFlags = if host == "homelab" then [
+                "--advertise-exit-node"
+                "--advertise-routes=192.168.0.0/16"
+            ] else [];
         };
 
         networking.nftables.enable = true;
