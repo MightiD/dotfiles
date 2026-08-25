@@ -1,5 +1,7 @@
 { ... }:
 {
+    containerDirs = [ "/containers/pihole" ];
+
     virtualisation.oci-containers.containers.pihole = {
         image = "pihole/pihole:latest";
         autoStart = true;

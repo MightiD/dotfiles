@@ -1,8 +1,12 @@
 { ... }:
 {
+    containerDirs = [
+        "/containers/jellyfin/config"
+        "/containers/jellyfin/cache"
+    ];
+
     virtualisation.oci-containers.containers.jellyfin = {
         image = "jellyfin/jellyfin";
-        user = "1000:1000";
         autoStart = true;
 
         devices = [

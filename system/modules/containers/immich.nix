@@ -1,8 +1,7 @@
 { ... }:
 {
-    imports = [ ./podman-networks.nix ];
-
     podmanNetworks = [ "immich" ];
+    containerDirs = [ "/containers/immich/immich-machine-learning" ];
 
     virtualisation.oci-containers.containers = {
         immich-server = {
