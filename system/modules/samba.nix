@@ -11,7 +11,7 @@
                 "security" = "user";
                 "map to guest" = "bad user";
                 "name resolve order" = "bcast host";
-                "hosts allow" = "192.168.0.1/16 10.0.0.0/8 172.16.0.0/12";
+                "hosts allow" = "192.168.0.1/16 10.0.0.0/8 172.16.0.0/12 100.64.0.0/10";
                 "hosts deny" = "0.0.0.0/0";
                 "guest account" = "nobody";
                 "server min protocol" = "SMB2";
