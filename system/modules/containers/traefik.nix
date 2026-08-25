@@ -1,7 +1,5 @@
 { pkgs, ... }:
 {
-    imports = [ ./podman-networks.nix ];
-
     podmanNetworks = [ "traefik" ];
 
     virtualisation.oci-containers.containers.traefik = {
@@ -28,8 +26,9 @@
 
         labels = {
             "traefik.enable" = "true";
-            "traefik.http.routers.dashboard.rule" = "Host(`dash.local`)";
+            "traefik.http.routers.dashboard.rule" = "Host(`traefik.local`)";
             "traefik.http.routers.dashboard.entrypoints" = "web";
+            "traefik.http.routers.dashboard.service" = "api@internal";
         };
     };
 
