@@ -14,6 +14,7 @@
         ../../modules/ly.nix
         ../../modules/pipewire.nix
         ../../modules/theming.nix
+        ../../modules/cifs.nix
         ../../modules/gaming.nix
         ../../modules/cad.nix
         ../../modules/bluetooth.nix
