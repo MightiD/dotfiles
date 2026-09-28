@@ -1,0 +1,34 @@
+# ignore — patterns excluded from aconfmgr save
+
+# Package-managed dirs (pacman owns these, no need to track)
+/etc/ld.so.cache
+/etc/ld.so.conf.d/*
+/etc/ca-certificates/*
+/etc/ssl/certs/*
+/etc/fonts/conf.d/*
+
+# Runtime / auto-generated
+/etc/adjtime
+/etc/machine-id
+/etc/hostname
+/etc/fstab
+/etc/crypttab
+/etc/mtab
+/etc/resolv.conf
+/etc/environment
+
+# Sensitive — manage outside aconfmgr
+/etc/shadow
+/etc/passwd
+/etc/group
+/etc/gshadow
+/etc/sudoers
+/etc/sudoers.d/*
+/etc/ssh/ssh_host_*    # host keys, never commit
+
+# Noisy runtime state
+/etc/systemd/system/multi-user.target.wants/*
+/etc/systemd/system/graphical.target.wants/*
+/etc/systemd/system/sockets.target.wants/*
+/etc/udev/rules.d/70-persistent*
+/etc/NetworkManager/system-connections/*  # contains credentials
