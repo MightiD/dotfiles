@@ -4,6 +4,7 @@
             system
             user
             networking
+            bootloader
         ];
     };
 }
