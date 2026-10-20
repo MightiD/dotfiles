@@ -6,6 +6,8 @@
             bootloader
         ];
     in {
-        imports = modules;
+        imports = [
+            /etc/nixos/hardware-configuration.nix
+        ] ++ modules;
     };
 }

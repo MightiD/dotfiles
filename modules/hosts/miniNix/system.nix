@@ -3,9 +3,5 @@
         environment.systemPackages = with pkgs; [
             fastfetch
         ];
-
-        imports = [
-            /etc/nixos/hardware-configuration.nix
-        ];
     };
 }
