@@ -1,10 +1,11 @@
-{self, inputs, ...}: {
-    flake.nixosConfigurations.bigNix = inputs.nixpkgs.lib.nixosSystem {
+{self, ...}: {
+    flake.nixosModules.system = {...}: let
         modules = with self.nixosModules; [
-            system
             user
             networking
             bootloader
         ];
+    in {
+        imports = modules;
     };
 }

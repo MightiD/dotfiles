@@ -1,5 +1,5 @@
 {...}: {
-    flake.nixosModules.system = {pkgs, ...}: {
+    flake.nixosModules.bigNixHostConfiguration = {pkgs, ...}: {
         environment.systemPackages = with pkgs; [
             git
         ];
