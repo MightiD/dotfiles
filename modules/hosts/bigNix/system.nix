@@ -1,7 +1,5 @@
 {...}: {
     flake.nixosModules.bigNixHostConfiguration = {pkgs, ...}: {
-        environment.systemPackages = with pkgs; [
-            git
-        ];
+        networking.hostName = "bigNix";
     };
 }
