@@ -5,6 +5,7 @@
             networking
             bootloader
             zsh
+            syncthing
         ];
     in {
         imports = [
