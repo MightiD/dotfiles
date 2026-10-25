@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             user
             networking
+            locale
             bootloader
             zsh
             syncthing
