@@ -4,6 +4,7 @@
             user
             networking
             bootloader
+            zsh
         ];
     in {
         imports = [
