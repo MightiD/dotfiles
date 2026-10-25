@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             bigNixHostConfiguration
             system
+            desktopHyprland
         ];
     };
 }

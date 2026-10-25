@@ -1,7 +1,8 @@
 {inputs, moduleWithSystem, ...}: {
-    flake.nixosModules.hyprland = moduleWithSystem({pkgs, self', ...}: {
-        programs.zsh = {
-            package = self'.packages.zsh;
+    flake.nixosModules.hyprland = moduleWithSystem({self', ...}: {
+        programs.hyprland = {
+            enable = true;
+            package = self'.packages.hyprland;
         };
     });
 
