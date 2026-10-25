@@ -1,9 +1,15 @@
 {inputs, moduleWithSystem, ...}: {
-    flake.nixosModules.hyprland = moduleWithSystem({self', ...}: {
+    flake.nixosModules.hyprland = moduleWithSystem({pkgs, self', ...}: {
         programs.hyprland = {
             enable = true;
             package = self'.packages.hyprland;
         };
+
+        environment.systemPackages = with pkgs; [
+            hyprshot
+            awww
+            playerctl
+        ];
     });
 
     perSystem = {pkgs, lib, ...}:let
