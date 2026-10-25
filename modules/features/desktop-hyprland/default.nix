@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             hyprland
             waybar
+            fuzzel
         ];
     in {
         imports = modules;
