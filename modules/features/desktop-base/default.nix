@@ -8,6 +8,7 @@
             school
             firefox
             media
+            office
         ];
     in {
         imports = modules;
