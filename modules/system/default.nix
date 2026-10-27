@@ -9,6 +9,7 @@
             zsh
             syncthing
             time
+            openssh
         ];
     in {
         nix.settings.experimental-features = ["nix-command" "flakes"];
