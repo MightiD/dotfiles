@@ -2,6 +2,7 @@
     flake.nixosModules.desktopBase = {pkgs, ...}: let
         modules = with self.nixosModules; [
             bluetooth
+            cifs
             printing
             foot
             theming
