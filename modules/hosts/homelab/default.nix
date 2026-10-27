@@ -4,6 +4,7 @@
             homelabHostConfiguration
             system
             smbServer
+            openvpnServer
         ];
     };
 }
