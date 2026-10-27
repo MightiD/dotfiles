@@ -23,6 +23,15 @@
                 year = "cal -my";
                 uefi = "systemctl reboot --firmware-setup";
             };
+
+            zshrc = {
+                path = ./zshrc;
+
+                content = ''
+                    source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+                    source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+                '';
+            };
         };
     };
 }

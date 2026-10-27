@@ -3,6 +3,7 @@
         users.users.mightid = {
             isNormalUser = true;
             initialPassword = "password";
+            shell = pkgs.zsh;
             extraGroups = [
                 "root"
                 "wheel"

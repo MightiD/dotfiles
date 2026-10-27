@@ -1,0 +1,41 @@
+# PATH
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path "$HOME/.zsh/cache"
+autoload -Uz compinit && compinit
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+
+# Completion
+setopt COMPLETE_ALIASES
+
+# Prompt
+autoload -Uz colors && colors
+PROMPT='%F{cyan}%n %m%f %F{blue}%~%f '
+
+# Editor
+export EDITOR=nvim
+
+# Functions
+open() {
+    nohup xdg-open "$@" > /dev/null 2>&1 &
+}
+
+bgcmd() {
+    nohup "$@" > /dev/null 2>&1 &
+}
+
+# eza completion for ls
+compdef _eza ls
+
+
