@@ -2,7 +2,7 @@
     flake.nixosModules.desktopBase = {...}: let
         modules = with self.nixosModules; [
             foot
-            stylix
+            theming
         ];
     in {
         imports = modules;
