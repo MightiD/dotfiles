@@ -1,5 +1,5 @@
 {self, ...}: {
-    flake.nixosModules.desktopBase = {...}: let
+    flake.nixosModules.desktopBase = {pkgs, ...}: let
         modules = with self.nixosModules; [
             bluetooth
             foot
@@ -10,6 +10,10 @@
         ];
     in {
         imports = modules;
+
+        environment.systemPackages = with pkgs; [
+            wl-clipboard
+        ];
     };
 }
 
