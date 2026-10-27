@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             desktopBase
             kde
+            ly
         ];
     in {
         imports = modules;
