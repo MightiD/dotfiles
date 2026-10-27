@@ -7,6 +7,7 @@
             cad
             school
             firefox
+            media
         ];
     in {
         imports = modules;
