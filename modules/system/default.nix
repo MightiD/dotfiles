@@ -1,6 +1,7 @@
 {self, ...}: {
     flake.nixosModules.system = {...}: let
         modules = with self.nixosModules; [
+            common
             user
             networking
             locale
