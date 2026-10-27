@@ -6,6 +6,7 @@
             theming
             cad
             school
+            firefox
         ];
     in {
         imports = modules;
