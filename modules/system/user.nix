@@ -8,6 +8,7 @@
                 "root"
                 "wheel"
                 "dialout"
+                "docker"
             ];
         };
     };
