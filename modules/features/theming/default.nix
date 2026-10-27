@@ -41,6 +41,10 @@
                     name = "Noto Color Emoji";
                 };
             };
+
+            targets = {
+                plymouth.enable = false;
+            };
         };
 
         fonts.packages = with pkgs; [
