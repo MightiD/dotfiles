@@ -5,6 +5,7 @@
             hyprland
             waybar
             fuzzel
+            keyboard
         ];
     in {
         imports = modules;
