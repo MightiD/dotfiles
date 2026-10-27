@@ -9,6 +9,7 @@
             firefox
             media
             office
+            gaming
         ];
     in {
         imports = modules;
