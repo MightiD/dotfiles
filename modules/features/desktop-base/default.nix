@@ -4,6 +4,7 @@
             foot
             theming
             cad
+            school
         ];
     in {
         imports = modules;
