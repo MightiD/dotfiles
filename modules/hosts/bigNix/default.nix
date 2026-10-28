@@ -4,6 +4,7 @@
             bigNixHostConfiguration
             system
             desktopHyprland
+            networking-bigNix
         ];
     };
 }

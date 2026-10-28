@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             homelabHostConfiguration
             system
+            networking-homelab
             smbServer
             openvpnServer
         ];

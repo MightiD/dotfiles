@@ -1,16 +1,13 @@
 {...}: {
-    flake.nixosModules.networking = {...}: {
+    flake.nixosModules.networking = {pkgs, ...}: {
         networking = {
             networkmanager = {
                 enable = true;
-                dns = "none";
+                plugins = [ pkgs.networkmanager-openvpn ];
             };
-            nameservers = [
-                "192.168.255.1"
-            ];
             firewall.enable = false;
         };
-
         systemd.services.NetworkManager-wait-online.enable = false;
     };
+
 }

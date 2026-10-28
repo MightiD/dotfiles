@@ -4,6 +4,7 @@
             miniNixHostConfiguration
             system
             desktopKde
+            networking-miniNix
         ];
     };
 }
