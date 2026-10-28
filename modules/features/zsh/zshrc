@@ -23,8 +23,9 @@ setopt COMPLETE_ALIASES
 autoload -Uz colors && colors
 PROMPT='%F{cyan}%n %m%f %F{blue}%~%f '
 
-# Editor
+# exports
 export EDITOR=nvim
+export NIXPKGS_ALLOW_UNFREE=1
 
 # Functions
 open() {
