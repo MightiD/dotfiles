@@ -8,7 +8,7 @@
         environment.systemPackages = with pkgs; [
             hyprshot
             awww
-            playerctl
+            swaynotificationcenter
         ];
     });
 
