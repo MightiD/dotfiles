@@ -5,7 +5,7 @@
             bluetooth
             cifs
             printing
-            foot
+            ghostty
             theming
             cad
             school
