@@ -6,7 +6,6 @@
             cifs
             printing
             ghostty
-            theming
             cad
             school
             firefox
