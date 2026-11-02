@@ -5,6 +5,7 @@
             system
             desktopKde
             networking-miniNix
+            galaxyBook
         ];
     };
 }
