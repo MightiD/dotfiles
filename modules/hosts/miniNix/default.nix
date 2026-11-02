@@ -3,6 +3,7 @@
         modules = with self.nixosModules; [
             miniNixHostConfiguration
             system
+            intelDrivers
             desktopKde
             networking-miniNix
             galaxyBook
