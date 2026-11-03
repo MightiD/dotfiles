@@ -10,6 +10,14 @@
             awww
             swaynotificationcenter
         ];
+        
+        services.getty.autologinUser = "mightid";
+        
+        programs.zsh.loginShellInit = ''
+            if [[ "$(tty)" == "/dev/tty1" && -z "$DISPLAY" && -z "$WAYLAND_DISPLAY" ]]; then
+                exec start-hyprland
+            fi
+        '';
     });
 
     perSystem = {pkgs, lib, ...}:let
