@@ -10,6 +10,7 @@
         wrappers.url = "github:nix-community/nix-wrapper-modules";
 
         stylix.url = "github:nix-community/stylix/release-26.05";
+        nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     };
 
     outputs = inputs:
