@@ -2,7 +2,7 @@
     flake.nixosModules.dev = moduleWithSystem({pkgs, self', ...}: {
         environment.systemPackages = [
             self'.packages.vscodium
-            pkgs.neovim
+            self'.packages.neovim
             pkgs.python3
         ];
     });
@@ -45,6 +45,15 @@
                         --user-data-dir "$DATA_DIR" "$@"
                 ''
             ];
+        };
+
+        packages.neovim = inputs.wrappers.lib.wrapPackage {
+            inherit pkgs;
+            package = pkgs.neovim;
+
+            flags = {
+                "-u" = ./init.lua;
+            };
         };
     };
 }
