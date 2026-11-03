@@ -16,6 +16,7 @@
             dysk
             ripgrep
             fd
+            unzip
         ];
 
         documentation.dev.enable = true;
