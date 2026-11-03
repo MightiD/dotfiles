@@ -10,6 +10,7 @@
             syncthing
             time
             openssh
+	    dev
             containers
         ];
     in {
