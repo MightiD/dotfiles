@@ -12,6 +12,7 @@
             media
             office
             gaming
+            vscodium
         ];
     in {
         imports = modules;

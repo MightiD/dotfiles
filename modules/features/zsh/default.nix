@@ -11,13 +11,13 @@
         };
     });
 
-    perSystem = {pkgs, lib, ...}: {
+    perSystem = {pkgs, lib, self', ...}: {
         packages.zsh = inputs.wrappers.wrappers.zsh.wrap {
             inherit pkgs;
             zshAliases = {
                 ls = "${lib.getExe pkgs.eza} --icons -a";
                 l = "ls -lah";
-                vim = lib.getExe pkgs.neovim;
+                vim = lib.getExe self'.packages.neovim;
                 cat = lib.getExe pkgs.bat;
                 ip = "ip -c";
                 year = "cal -my";
