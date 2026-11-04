@@ -4,6 +4,7 @@
             miniNixHostConfiguration
             system
             intelDrivers
+            fprint
             desktopKde
             networking-miniNix
             galaxyBook
