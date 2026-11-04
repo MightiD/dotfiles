@@ -22,6 +22,7 @@
                 ip = "ip -c";
                 year = "cal -my";
                 uefi = "systemctl reboot --firmware-setup";
+                wlc = "${lib.getExe' pkgs.wl-clipboard "wl-copy"} <";
             };
 
             zshrc = {

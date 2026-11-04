@@ -17,9 +17,9 @@
     in {
         imports = modules;
 
-        environment.systemPackages = with pkgs; [
-            wl-clipboard
-        ];
+        # environment.systemPackages = with pkgs; [
+        #
+        # ];
     };
 }
 
