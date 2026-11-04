@@ -1,0 +1,63 @@
+# PATH
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' special-dirs true
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*' use-cache yes
+zstyle ':completion:*' cache-path "$HOME/.zsh/cache"
+autoload -Uz compinit && compinit
+
+# History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+
+# Completion
+setopt COMPLETE_ALIASES
+
+# Prompt
+autoload -Uz colors && colors
+
+autoload -Uz vcs_info
+setopt PROMPT_SUBST
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:git*' formats ' %F{yellow}(%b%u%c%m)%f'
+zstyle ':vcs_info:git*' actionformats ' %F{yellow}(%b|%a%u%c%m)%f'
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
++vi-git-untracked() {
+  if git status --porcelain 2>/dev/null | grep -q '^??'; then
+    hook_com[misc]+='?'
+  fi
+}
+
+precmd() { vcs_info }
+
+PROMPT='%F{blue}%~%f $ '
+RPROMPT='${vcs_info_msg_0_}'
+
+# exports
+export EDITOR=nvim
+export NIXPKGS_ALLOW_UNFREE=1
+
+# Functions
+open() {
+    nohup xdg-open "$@" > /dev/null 2>&1 &
+}
+
+bgcmd() {
+    nohup "$@" > /dev/null 2>&1 &
+}
+
+# eza completion for ls
+compdef _eza ls
+
+

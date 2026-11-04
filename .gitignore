@@ -1,0 +1,14 @@
+# Build outputs
+result
+result-*
+
+*.qcow2
+
+# Nix / direnv
+.direnv/
+.envrc.local
+
+*.age
+*.key
+secrets.yaml
+.env

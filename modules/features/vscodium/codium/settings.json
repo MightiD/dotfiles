@@ -1,0 +1,20 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.browser.showInTitleBar": false,
+    "workbench.activityBar.compact": true,
+    "security.workspace.trust.enabled": false,
+    "editor.cursorSurroundingLines": 15,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.lineNumbers": "relative",
+    "workbench.panel.showLabels": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Rosé Pine (no italics)",
+    "keyboard.dispatch": "keyCode"
+}
