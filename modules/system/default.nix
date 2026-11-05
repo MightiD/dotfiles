@@ -7,6 +7,7 @@
             locale
             bootloader
             zsh
+            nh
             syncthing
             time
             openssh
