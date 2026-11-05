@@ -22,6 +22,8 @@
                     dns = "192.168.255.1;";
                 };
                 ipv6.method = "disabled";
+
+                ethernet.wake-on-lan = "magic";
             };
         };
     };
